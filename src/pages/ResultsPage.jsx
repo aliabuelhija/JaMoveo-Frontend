@@ -13,7 +13,7 @@ function ResultsPage() {
   useEffect(() => {
     const fetchResults = async () => {
       try {
-        const response = await axios.post('http://localhost:8080/admin/search', query);
+        const response = await axios.post('https://jamoveo-backend-fork.onrender.com/admin/search', query);
         setResults(response.data); // Set the results in the state
         setLoading(false); // Set loading to false after receiving data
       } catch (error) {
@@ -29,7 +29,7 @@ function ResultsPage() {
     console.log('Selected song:', song);
   
     try {
-      const response = await axios.post('http://localhost:8080/admin/movetolive', JSON.stringify(song), {
+      const response = await axios.post('https://jamoveo-backend-fork.onrender.com/admin/movetolive', JSON.stringify(song), {
         headers: {
           'Content-Type': 'application/json'
         }

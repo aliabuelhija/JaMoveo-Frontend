@@ -10,7 +10,7 @@ export const WebSocketProvider = ({ children }) => {
 
   useEffect(() => {
     const connect = () => {
-      const socket = new SockJS('http://localhost:8080/ws');
+      const socket = new SockJS('https://jamoveo-backend-fork.onrender.com/ws');
       stompClient.current = Stomp.over(socket);
 
       stompClient.current.connect({}, () => {

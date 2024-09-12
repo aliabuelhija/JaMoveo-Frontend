@@ -25,7 +25,7 @@ function LoginPage() {
             setErrorMessage('');
 
             // Send login request to the backend
-            const response = await axios.post('http://localhost:8080/login', { username, password });
+            const response = await axios.post('https://jamoveo-backend-fork.onrender.com/login', { username, password });
             const role = response.data.role;
             if (!role) {
                 setErrorMessage('Invalid username or password. Please try again.');

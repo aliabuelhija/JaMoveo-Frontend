@@ -12,7 +12,7 @@ function AdminMainPage() {
     event.preventDefault();
     try {
       // Send HTTP POST request to search songs
-      const response = await axios.post('http://localhost:8080/admin/search', query, {
+      const response = await axios.post('https://jamoveo-backend-fork.onrender.com/admin/search', query, {
         headers: { 'Content-Type': 'application/json' }
       });
       const foundSongs = response.data;

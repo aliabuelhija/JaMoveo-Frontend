@@ -16,7 +16,7 @@ function LivePage() {
 
   useEffect(() => {
     if (role === 'ADMIN' && selectedSong.title !== 'No song selected') {
-      axios.post('http://localhost:8080/admin/show', selectedSong)
+      axios.post('https://jamoveo-backend-fork.onrender.com/admin/show', selectedSong)
         .then(response => {
           console.log('Song data requested:', response.data);
         })
@@ -76,7 +76,7 @@ function LivePage() {
   const onExit = async () => {
     if (role === 'ADMIN') {
       try {
-        await axios.post('http://localhost:8080/admin/exit');
+        await axios.post('https://jamoveo-backend-fork.onrender.com/admin/exit');
         navigate('/admin');
       } catch (error) {
         console.error('Failed to exit the rehearsal:', error);

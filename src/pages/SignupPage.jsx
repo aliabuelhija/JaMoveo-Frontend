@@ -25,7 +25,7 @@ function SignupPage() {
         endpoint = '/admin/signup';
       }
 
-      const response = await axios.post(`http://localhost:8080${endpoint}`, user);
+      const response = await axios.post(`https://jamoveo-backend-fork.onrender.com${endpoint}`, user);
 
       setSuccessMessage('Registration successful! You can now log in.');
     } catch (error) {
